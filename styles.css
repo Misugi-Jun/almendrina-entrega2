@@ -8,7 +8,6 @@
     width: 80%;
     margin: 0 auto;
     color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 250px 100px auto 150px;
@@ -24,19 +23,31 @@
 }
 
 .encabezado{
-        background-color: #f1ddbf;
+        background-color: rgb(215,187,184);
+
         grid-area: header;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         
+         
 
 }
 
+.encabezado img{
+    height: 300px;
+    width: 200px;
+}
+
+
 .menu{
-        background-color: burlywood;
+        background-color: rgb(215,187,184);
         grid-area: nav;
+        gap: 1.8rem;
+
+        
+        
 }
 
 .menu ul{
@@ -45,22 +56,34 @@
    justify-content: space-evenly;
    align-items: center;
    height: 100%;
+   
   
+
+}
+
+.menu li{
+    background-color: rgba(204, 151, 145, 0.822);
+    padding: .5rem  1rem;
 
 }
 
 .menu ul li a{
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
 
 }
 
 
 .contenido{
-    background-color: #92ba92  ;
+    background-color: rgb(215,187,184)  ;
     grid-area: main;
     
     
+}
+
+.contenido img{
+    height: 300px;
+    width: 300px;
 }
 
 .conocenos{
@@ -71,13 +94,15 @@
 }
 
 
+
+
 .sobre-nosotros{
     text-align: center;
     margin: 50px;
 }
 
 .publicidad{
-        background-color: #525e75;
+        background-color: rgb(215,187,184);
         grid-area: aside;
         display: flex;
         flex-direction: column;
@@ -88,9 +113,14 @@
         
 }
 
+.publicidad img{
+    height: 150px;
+    width: 150px;
+}
+
 
 .pie{
-    background-color: #78939a;
+    background-color: rgb(180, 160, 158);
     grid-area: footer;
     display: flex;
     justify-content: center;
@@ -100,6 +130,8 @@
 
 .pie img{
     margin: 10px;
+    height: 30px;
+    width: 30px;
 }
 
 /*------MEDIA QUERY------*/
@@ -156,3 +188,203 @@
     }
 
 }
+
+
+
+/* PRODUCTOS   */
+
+
+ 
+ h2{
+    text-align: center;
+ }
+ a {
+    text-decoration: none;
+    color: black;
+   
+ }
+ 
+ ul{
+    list-style: none;
+ }
+ 
+ img{
+    max-width: 100%;
+ }
+ 
+ /*DESKTOP FIRST*/
+ 
+ /*LA GRILLA PRINCIPAL*/
+ #grilla-profe{
+    
+    margin: 0 auto;
+    color: black;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "productos productos productos"
+    "banner banner banner"
+    "footer footer footer";
+ 
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(215,187,184);
+ 
+ }
+ 
+ /*HEADER O CABECERA*/
+ 
+ #header-profe{
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 4rem;
+ }
+ 
+ @media screen and (max-width: 767px) {
+    #header-profe{
+       flex-direction:column;
+    }
+ }
+ 
+ 
+ .Logo{
+    height: 10rem;
+    
+ }
+ 
+
+ 
+ /*El hover es la acción de posaar el mouse sobre un elemnto*/
+ .Logo1:hover{
+    transform: scale(2);
+ }
+ 
+ 
+ #navegacion-profe{
+    display: flex;
+    gap: 1.8rem;
+ }
+ 
+ 
+ @media screen and (max-width: 399px) {
+    #navegacion-profe{
+       flex-direction: column;
+    }
+    
+ }
+ 
+ #navegacion-profe li{
+    background-color: rgba(204, 151, 145, 0.822);
+    padding: .5rem  1rem;
+    /*La tranasition se declara sobre el elemento sin hover */
+ 
+    transition: all 3s ;
+    
+ }
+ 
+ 
+ 
+ 
+ /*PRODUCTOS*/
+ #Productos-Almendrinas{
+    grid-area: productos;
+ }
+ 
+ #Productos-Almendrinas h2,
+ #Productos-Almendrinas p {
+    text-align: center;
+ }
+ 
+ .padre-cards{
+ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    justify-items: center;
+ 
+ }
+ 
+ @media screen and (max-width: 992px) {
+    .padre-cards{
+       grid-template-columns: repeat(2, 1fr);
+    }
+    
+ }
+ 
+ @media screen and (max-width: 767px) {
+    .padre-cards{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    
+ }
+ 
+ .card-profe{
+    width: 20rem;
+    border: solid 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+ }
+ 
+ .card-profe img{
+    height: 12rem;
+ }
+ /*BANNER*/
+ #banner-profe{
+    grid-area: banner;
+   
+    margin-top: 4rem;
+    padding: 2rem;
+ }
+ 
+ #banner-profe h2{
+    text-align: center;
+  }
+ 
+  .padre-banner{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+ 
+  @media screen and (max-width: 992px) {
+    .padre-banner{
+       grid-template-columns: repeat(2, 1fr);
+    }}
+ 
+    @media screen and (max-width: 767px) {
+       .padre-banner{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+       }}
+ 
+  .banner-caracteristicas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+ 
+ /*FOOTER*/
+ 
+ #footer-profe{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #footer-profe img{
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 30px;
+ }
+ 
