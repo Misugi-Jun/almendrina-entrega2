@@ -1,0 +1,95 @@
+/*PRODUCTOS*/
+/*HEADER O CABECERA*/
+ 
+#header-profe{
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 4rem;
+ }
+ 
+
+#Productos-Almendrinas{
+    grid-area: productos;
+ }
+ 
+ #Productos-Almendrinas h2,
+ #Productos-Almendrinas p {
+    text-align: center;
+ }
+ 
+ .padre-cards{
+ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    justify-items: center;
+ 
+ }
+ 
+ @media screen and (max-width: 992px) {
+    .padre-cards{
+       grid-template-columns: repeat(2, 1fr);
+    }
+    
+ }
+ 
+ @media screen and (max-width: 767px) {
+    .padre-cards{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    
+ }
+ 
+ .card-profe{
+    width: 20rem;
+    border: solid 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+ }
+ 
+ .card-profe img{
+    height: 12rem;
+ }
+
+ /*Mixins*/
+ @mixin flex-column-center {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+ }
+
+ /*Extend*/
+ .boton{
+   width: 300px;
+   border-radius: 80px;
+   padding: 5px 15px;
+   font-size: 1rem;
+}
+
+.boton-2{
+   @extend .boton;
+}
+
+.boton-3{
+   @extend .boton;
+}
+
+.boton-4{
+   @extend .boton;
+}
+
+.boton-5{
+   @extend .boton;
+}
+
+.boton-6{
+   @extend .boton;
+}
